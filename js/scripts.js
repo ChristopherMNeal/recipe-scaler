@@ -4,6 +4,8 @@ const volSmallestUnit = [1, 1.23, 2.46, 4.93, 14.79, 59, 78, 118, 236.6, 473.2, 
 function findUnit(convertedInput) {
   let unitArray = [];
   let remainder = 1;
+  // how could I DRY these loops?
+  // should this top loop be a do while loop so it always runs once?
   for (let i = volSmallestUnit.length; i > 0; i--) {
     if (convertedInput >= volSmallestUnit[i] && remainder >= 1) {
       const unitOne = Math.floor(convertedInput / volSmallestUnit[i]) + volUnitArray[i];
