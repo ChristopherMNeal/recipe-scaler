@@ -5,31 +5,46 @@ const volSmallestUnit = [1, 1.23, 2.46, 4.93, 7.37, 14.79, 29.57, 59, 78, 118, 2
 //at the end and in the if remainder < 1 statements.
 
 function findUnit(convertedInput) {
+  let unitArray = [];
   let remainder = 0;
   for (let i = volSmallestUnit.length; i > 0; i--) {
     if (convertedInput >= volSmallestUnit[i]) {
       const unitOne = Math.floor(convertedInput / volSmallestUnit[i]) + volUnitArray[i];
       remainder = convertedInput % volSmallestUnit[i];
       console.log(unitOne);
-      break;
+      unitArray.push(unitOne);
+      // break;
     }
-    for (let k = volSmallestUnit.length; k > 0; k--) {
+    for (let j = volSmallestUnit.length; j > 0; j--) {
       if (remainder < 1) {
         break;
-      } else if (remainder >= volSmallestUnit[i]) {
+      } else if (remainder >= volSmallestUnit[j]) {
           const unitTwo = Math.floor(remainder / volSmallestUnit[j]) + volUnitArray[j];
           remainder = remainder % volSmallestUnit[j];
           console.log(unitTwo);
+          unitArray.push(unitTwo);
           break;
       }
-      for (let k = volSmallestUnit.length; k > 0; k--) {
+      for (let l = volSmallestUnit.length; l > 0; l--) {
         if (remainder < 1) {
           break;
-        } else if (remainder >= volSmallestUnit[k]) {
-            const unitThree = Math.floor(remainder / volSmallestUnit[k]) + volUnitArray[k];
-            remainder = remainder % volSmallestUnit[k];
+        } else if (remainder >= volSmallestUnit[l]) {
+            const unitThree = Math.floor(remainder / volSmallestUnit[l]) + volUnitArray[l];
+            remainder = remainder % volSmallestUnit[l];
             console.log(unitThree);
+            unitArray.push(unitThree);
             break;
+        }
+        for (let k = volSmallestUnit.length; k > 0; k--) {
+          if (remainder < 1) {
+            break;
+          } else if (remainder >= volSmallestUnit[k]) {
+              const unitFour = Math.floor(remainder / volSmallestUnit[k]) + volUnitArray[k];
+              remainder = remainder % volSmallestUnit[k];
+              console.log(unitFour);
+              unitArray.push(unitFour);
+              break;
+          }
         }
       }
     }
@@ -37,7 +52,7 @@ function findUnit(convertedInput) {
 }
 
 function scaler(input, unit, scale) {
-  const convertInput = input * volSmallestUnit[indexOf(unit)] * scale;
+  const convertInput = input * volSmallestUnit[volUnitArray.indexOf(unit)] * scale;
   return findUnit(convertInput);
 }
 
