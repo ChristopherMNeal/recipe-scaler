@@ -8,7 +8,7 @@ function findUnit(convertedInput) {
   let unitArray = [];
   let remainder = 1;
   for (let i = volSmallestUnit.length; i > 0; i--) {
-    if (convertedInput >= volSmallestUnit[i] && remainder > 1) {
+    if (convertedInput >= volSmallestUnit[i] && remainder >= 1) {
       const unitOne = Math.floor(convertedInput / volSmallestUnit[i]) + volUnitArray[i];
       remainder = convertedInput % volSmallestUnit[i];
       console.log("unit one = " + unitOne);
