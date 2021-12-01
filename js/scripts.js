@@ -40,9 +40,9 @@ function smallestUnit(convertedInput, unitArray, smallestUnitArray) {
 
 function scalerLogic(input, unit, scale) {
   const volSmallestUnit = [0, 1, 1.23, 2.46, 4.93, 14.79, 59, 78, 118, 236.6, 473.2, 946.3, 1000, 3785];
-  const volUnitArray = ["zero", "ml", "quarter tsp", "half tsp", "teaspoon", "tablespoon", "quarter cup", "third cup", "half cup", "cup", "pint", "quart", "liter", "gallon", "ton"];
-  const massSmallestUnit = [0, 1, 28.35, 453.59, 1000, 907185];
-  const massUnitArray = ["zero", "gram", "ounce", "pound", "kilogram", "ton"];
+  const volUnitArray = ["zero", "ml", "quarter tsp", "half tsp", "teaspoon", "tablespoon", "quarter cup", "third cup", "half cup", "cup", "pint", "quart", "liter", "gallon"];
+  const massSmallestUnit = [0, 1, 28.35, 453.59, 1000, 907185, 1000000];
+  const massUnitArray = ["zero", "gram", "ounce", "pound", "kilogram", "ton", "metric ton"];
   let convertInput = 0;
   if (volUnitArray.indexOf(unit) != -1) {
     convertInput = input * volSmallestUnit[volUnitArray.indexOf(unit)] * scale;
