@@ -24,9 +24,9 @@ _This page will scale a recipe by any desired amount and choose the best measure
 
 ## Known Bugs
 
-_5 ounces scaled once returns 5 ounces, 1 ounce.  Should return 5 ounces._
-_10 ounces scaled once returns 10 ounces, 1 ounce.  Should return 10 ounces._
-_15 ounces scaled once returns 15 ounces, 1 ounce.  Should return 15 ounces._
+_3 ounces scaled once returns 2 ounce, 1 half ounce, 1 quarter ounce, 1 eighth ounce'.  Should return 3 ounces._
+_6 ounces scaled once returns 5 ounce, 1 half ounce, 1 quarter ounce, 1 eighth ounce'.  Should return 6 ounces._
+_7 ounces scaled once returns 7 ounce, 1 half ounce, 1 quarter ounce, 1 eighth ounce'.  Should return 7 ounces._
 
 ## Future Improvements
 
