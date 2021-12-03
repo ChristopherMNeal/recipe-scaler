@@ -24,15 +24,13 @@ _This page will scale a recipe by any desired amount and choose the best measure
 
 ## Known Bugs
 
-_None_
+_5 ounces scaled once returns 5 ounces, 1 ounce.  Should return 5 ounces._
+_10 ounces scaled once returns 10 ounces, 1 ounce.  Should return 10 ounces._
+_15 ounces scaled once returns 15 ounces, 1 ounce.  Should return 15 ounces._
 
 ## Future Improvements
 
 * _Add UI to input entire recipes_
-* _Add a larger loop for handling multiple ingredients at a time._
-* _Change the two unit arrays to an object_
-* _Add support for weight measurements in addition to volume_
-* _DRY findUnit loop_
 
 ## License
 
