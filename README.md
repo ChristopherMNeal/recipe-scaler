@@ -36,4 +36,4 @@ _15 ounces scaled once returns 15 ounces, 1 ounce.  Should return 15 ounces._
 
 _[MIT](https://opensource.org/licenses/MIT)_
 
-Copyright (c) _21 October 2021_ _Christopher Neal &_
+Copyright (c) _21 October 2021_ _Christopher Neal_
